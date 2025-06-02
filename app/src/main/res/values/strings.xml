@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Leafcass</string>
+    <string name="judul_penyakit">🦠 Jenis Penyakit Umum</string>
+    <string name="judul_deteksi">📷 Deteksi Otomatis</string>
+</resources>

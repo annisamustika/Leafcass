@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F6">
+
+    <!-- Toolbar dengan judul dan ikon kembali -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDeteksiPenyakit"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#D2B48C"
+        android:title="Deteksi Penyakit Daun"
+        android:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/arrow_back"
+        app:navigationIconTint="@android:color/white" />
+
+    <!-- Konten yang dapat discroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+    <!-- Container Gambar dengan CardView Look -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/image_background"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="Gambar daun singkong" />
+    </FrameLayout>
+
+    <!-- Hasil Prediksi -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil Prediksi"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E2E2E"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Tombol Detail (awalnya hidden) -->
+    <Button
+        android:id="@+id/btnDetailPenyakit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lihat Detail Penyakit"
+        android:visibility="gone"
+        android:backgroundTint="#D2B48C"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Spacer agar tombol utama tetap di bawah -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Tombol Galeri -->
+    <Button
+        android:id="@+id/selectImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Gambar dari Galeri"
+        android:backgroundTint="#D2B48C"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Tombol Kamera -->
+    <Button
+        android:id="@+id/takePictureBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ambil Gambar dari Kamera"
+        android:backgroundTint="#D2B48C"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

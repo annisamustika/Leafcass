@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background putih di dalam -->
+    <solid android:color="@android:color/white" />
+
+    <!-- Border coklat -->
+    <stroke
+        android:color="#D2B48C"
+        android:width="2dp" />
+
+    <!-- Corner radius untuk membulatkan pinggirnya (opsional) -->
+    <corners android:radius="8dp" />
+</shape>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F5F5F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#D2B48C"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang!"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="start|center_vertical" />
+
+        <ImageView
+            android:id="@+id/btnTentangAplikasi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:contentDescription="Tentang Aplikasi"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Konten utama scrollable -->
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Header dengan Gambar dan Judul -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="24dp"
+                android:background="@drawable/border"
+                android:elevation="6dp"
+                android:layout_marginBottom="24dp"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:id="@+id/headerImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/nature"
+                    android:contentDescription="Ilustrasi Singkong"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/appTitle"
+                    android:text="Deteksi penyakit daun singkong Anda dengan mengunggah foto, dan aplikasi akan menampilkan hasil secara otomatis"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#6D4C41"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start" />
+            </LinearLayout>
+
+            <!-- Judul Daftar Penyakit -->
+            <TextView
+                android:text="🦠 Jenis Penyakit Daun Singkong"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Grid Jenis Penyakit -->
+            <GridLayout
+                android:id="@+id/gridPenyakit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowOrderPreserved="false"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
+
+                <!-- Item Green Mite -->
+                <LinearLayout
+                    android:id="@+id/infoBercakDaun"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/border"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/greenmite993_"
+                        android:contentDescription="Green Mite" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Green Mite"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <!-- Item Brown Spot -->
+                <LinearLayout
+                    android:id="@+id/infoBusukBatang"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/border"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/brownspot995_"
+                        android:contentDescription="Brown Spot" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brown Spot"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <!-- Item Bacterial Blight -->
+                <LinearLayout
+                    android:id="@+id/infoMosaicVirus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/border"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/bacterialblight984_"
+                        android:contentDescription="Bacterial Blight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bacterial Blight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <!-- Item Mosaic -->
+                <LinearLayout
+                    android:id="@+id/infoPenyakitLain1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/border"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/mosaic996_"
+                        android:contentDescription="Mosaic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mosaic"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <!-- Item Healthy -->
+                <LinearLayout
+                    android:id="@+id/infoHealthy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@drawable/border"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/healthy995_"
+                        android:contentDescription="Healthy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Healthy"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+            </GridLayout>
+
+            <!-- Judul Deteksi -->
+            <TextView
+                android:text="📷 Mulai Deteksi Otomatis"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Tombol Mulai Deteksi -->
+            <Button
+                android:id="@+id/startDetectionBtn"
+                android:text="Mulai Deteksi"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D2B48C"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

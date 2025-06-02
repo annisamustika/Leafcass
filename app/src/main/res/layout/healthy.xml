@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- AppBar dengan Material Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarHealthy"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#D2B48C"
+        android:title="Jenis Penyakit Tanaman"
+        android:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/arrow_back"
+        app:navigationIconTint="@android:color/white" />
+
+    <!-- Konten utama dalam ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Gambar -->
+            <ImageView
+                android:id="@+id/imageViewGreenMite"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/healthy995_"
+                android:contentDescription="Gambar daun singkong" />
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/judulPenyakit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Healthy"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingVertical="16dp" />
+
+            <!-- Section: Penjelasan -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EFDECD">
+
+                    <TextView
+                        android:text="Penjelasan"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/penjelasan"
+                        android:text="Daun singkong yang sehat memiliki warna hijau merata, bentuk simetris, dan tidak menunjukkan bercak, lubang, atau perubahan warna yang tidak wajar."
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Gejala -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EFDECD">
+
+                    <TextView
+                        android:text="Ciri-ciri Daun Sehat"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/gejala"
+                        android:text="- Warna hijau cerah dan merata.\n- Tidak ada bercak cokelat atau kuning.\n- Tepi daun halus, tidak menggulung atau rusak.\n- Daun tidak kering, layu, atau bolong."
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Tips -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EFDECD">
+
+                    <TextView
+                        android:text="Tips Menjaga Daun Sehat"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/pengendalian"
+                        android:text="- Rutin periksa kondisi daun dan batang.\n- Gunakan pupuk sesuai anjuran.\n- Hindari penyiraman berlebihan.\n- Jaga kebersihan lingkungan tanaman.\n- Gunakan varietas unggul tahan penyakit.\n- Pangkas daun terinfeksi untuk cegah penyebaran.\n- Tanam varietas tahan tungau."
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

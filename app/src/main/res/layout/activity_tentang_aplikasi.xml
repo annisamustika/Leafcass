@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarTentangAplikasi"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#D2B48C"
+        android:title="Tentang Aplikasi"
+        android:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/arrow_back"
+        app:navigationIconTint="@android:color/white" />
+
+    <!-- Konten Scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Deskripsi Aplikasi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:clipToOutline="true"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mendeteksi kondisi daun singkong secara cepat dan akurat. Dengan bantuan teknologi kecerdasan buatan (AI), aplikasi dapat membantu mengidentifikasi tanda-tanda penyakit sejak dini, sehingga penanganan bisa dilakukan lebih cepat."
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+
+            <!-- Fitur Aplikasi -->
+            <TextView
+                android:text="✨ Fitur Aplikasi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✅ Deteksi Otomatis Penyakit Daun\nAplikasi mengenali kondisi daun singkong dari gambar secara otomatis menggunakan AI.\n✅ Klasifikasi 5 Jenis Kondisi Daun\n- Bacterial Blight\n- Mosaic\n- Brown Spot\n- Green Mite\n- Sehat (Healthy)\n✅ Detail Informasi Penyakit\nMenampilkan info lengkap tentang penyakit yang terdeteksi.\n✅ Dukungan Kamera dan Galeri\nAmbil gambar langsung atau pilih dari galeri.\n✅ Antarmuka Sederhana dan Intuitif\nMudah digunakan dengan tampilan modern.\n✅ Tanpa Koneksi Internet\nDeteksi bisa dilakukan tanpa internet (offline)."
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="6dp"
+                android:background="@drawable/border"
+                android:padding="12dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

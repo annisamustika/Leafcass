@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Warna utama coklat -->
+        <item name="colorPrimary">#D2B48C</item> <!-- SaddleBrown -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- Putih agar teks terlihat di atas warna coklat -->
+        <item name="colorPrimaryContainer">#8B4513</item> <!-- Tan / coklat terang -->
+        <item name="colorOnPrimaryContainer">#000000</item> <!-- Hitam untuk teks di atas container terang -->
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+</resources>

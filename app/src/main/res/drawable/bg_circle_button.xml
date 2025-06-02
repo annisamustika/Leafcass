@@ -1,0 +1,6 @@
+<!-- res/drawable/bg_circle_button.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#7C4D1D" /> <!-- warna coklat tua, bisa diganti -->
+    <size android:width="44dp" android:height="44dp" />
+</shape>
